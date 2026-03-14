@@ -1,7 +1,9 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  output: 'static',
+  site: 'https://refugiopeludosfelices.com',
+  integrations: [sitemap()],
   adapter: cloudflare(),
 });

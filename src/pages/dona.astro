@@ -37,51 +37,32 @@ import Layout from '../layouts/Layout.astro';
       <div class="section-header fade-up">
         <span class="section-icon">🏦</span>
         <h2>Transferencias bancarias</h2>
-        <p>Cuentas de ahorros a nombre de <strong>Peludos Felices</strong></p>
+        <p>Cuentas de ahorros a nombre de <strong>Peluditos Felices</strong></p>
       </div>
 
       <div class="bank-cards">
         <div class="bank-card fade-up fade-up-delay-1">
           <div class="bank-card-header">
-            <span class="bank-logo">BP</span>
+            <img src="/assets/icons/pichincha.svg" alt="Banco Pichincha" class="bank-logo-img" width="44" height="44" />
             <div>
               <h3>Banco Pichincha</h3>
-              <span class="bank-type">Cuenta de ahorros</span>
+              <span class="bank-type">Cuenta de ahorro transaccional</span>
             </div>
           </div>
           <div class="bank-number">
-            <span>000000</span>
-            <button class="copy-btn" data-copy="000000" aria-label="Copiar numero de cuenta">
+            <span>2207823267</span>
+            <button class="copy-btn" data-copy="2207823267" aria-label="Copiar numero de cuenta">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
             </button>
           </div>
-        </div>
-
-        <div class="bank-card fade-up fade-up-delay-2">
-          <div class="bank-card-header">
-            <span class="bank-logo pacifico">BPa</span>
-            <div>
-              <h3>Banco Pacifico</h3>
-              <span class="bank-type">Cuenta de ahorros</span>
-            </div>
-          </div>
-          <div class="bank-number">
-            <span>1051611837</span>
-            <button class="copy-btn" data-copy="1051611837" aria-label="Copiar numero de cuenta">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-            </button>
-          </div>
+          <p class="bank-beneficiary">Beneficiario: Lopez Gutierrez Gina Elizabeth</p>
         </div>
       </div>
 
       <div class="bank-info fade-up fade-up-delay-3">
         <div class="info-chip">
-          <span class="info-label">RUC</span>
-          <span class="info-value">1792329930001</span>
-        </div>
-        <div class="info-chip">
           <span class="info-label">Email</span>
-          <span class="info-value">betzabeth.2891@gmail.com</span>
+          <span class="info-value">peluditosfelices@gmail.com</span>
         </div>
       </div>
     </div>
@@ -267,8 +248,9 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .bank-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     max-width: 700px;
     margin: 0 auto;
@@ -310,6 +292,19 @@ import Layout from '../layouts/Layout.astro';
 
   .bank-logo.pacifico {
     background: linear-gradient(135deg, #003d7a, #0066cc);
+  }
+
+  .bank-logo-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+
+  .bank-beneficiary {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--brown-light);
   }
 
   .bank-card h3 {

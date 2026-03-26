@@ -3,18 +3,14 @@ import Layout from '../layouts/Layout.astro';
 
 const animals = [
   {
-    name: 'Paquito',
-    age: '6 meses',
-    image: '/assets/animals/perro.png',
-    type: 'Perro',
-    description: 'Paquito es un cachorrito lleno de energia y amor. Busca una familia que le de todo el carino que merece.',
+    name: 'Cony',
+    image: '/assets/animals/dog_2.jpg',
+    description: 'Cony es una perrita rescatada que ha pasado por momentos muy dificiles. Vivia en una familia donde la obligaban a tener camada tras camada sin recibir el cuidado ni la alimentacion que necesitaba. Hoy, su historia es diferente: esta esterilizada, vacunada y desparasitada. A pesar de todo lo que sufrio, Cony es increiblemente docil, carinosa y noble. Ahora solo le falta lo mas importante: un hogar digno donde la amen y la cuiden como se merece.',
   },
   {
-    name: 'Rumino',
-    age: '8 meses',
-    image: '/assets/animals/gato.png',
-    type: 'Gato',
-    description: 'Rumino es un gatito curioso y tranquilo. Le encanta explorar y dormir en lugares calentitos.',
+    name: 'Negrito',
+    image: '/assets/animals/dog_1.jpg',
+    description: 'Negrito es un perrito rescatado de un hogar donde sufrio maltrato. Cuando llego, estaba enfermito y necesitaba muchos cuidados, pero gracias al esfuerzo y carino recibido, hoy goza de buena salud. Ahora esta listo para comenzar una nueva vida. Buscamos una familia responsable que continue con sus vacunas, lo esterilice y, sobre todo, le brinde todo el amor que merece.',
   },
 ];
 ---
@@ -46,13 +42,11 @@ const animals = [
         {animals.map((animal, i) => (
           <article class={`animal-card fade-up fade-up-delay-${i + 1}`}>
             <div class="animal-image-wrap">
-              <img src={animal.image} alt={`${animal.name} - ${animal.type} en adopcion`} width="400" height="400" loading="lazy" />
-              <span class="animal-type-badge">{animal.type}</span>
+              <img src={animal.image} alt={`${animal.name} en adopcion`} width="400" height="400" loading="lazy" />
             </div>
             <div class="animal-info">
               <div class="animal-header">
                 <h3>{animal.name}</h3>
-                <span class="animal-age">{animal.age}</span>
               </div>
               <p>{animal.description}</p>
               <a
@@ -171,6 +165,8 @@ const animals = [
     overflow: hidden;
     border: 1px solid rgba(45, 24, 16, 0.05);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
   }
 
   .animal-card:hover {
@@ -212,6 +208,9 @@ const animals = [
 
   .animal-info {
     padding: 22px 24px 26px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .animal-header {
@@ -239,6 +238,7 @@ const animals = [
   }
 
   .adopt-btn {
+    margin-top: auto;
     display: inline-flex;
     align-items: center;
     gap: 6px;

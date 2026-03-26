@@ -16,7 +16,7 @@ const { title, activePage } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-    <title>{title} | Peluditos Felices</title>
+    <title>{title} | Refugio Peluditos Felices</title>
   </head>
   <body>
     <div class="grain-overlay"></div>
@@ -25,7 +25,7 @@ const { title, activePage } = Astro.props;
       <nav>
         <a href="/dona" class="logo" aria-label="Peluditos Felices - Inicio">
           <span class="logo-paw">🐾</span>
-          <span class="logo-text">Peluditos Felices</span>
+          <span class="logo-text">Refugio Peluditos Felices</span>
         </a>
         <div class="nav-links">
           <a href="/dona" class:list={["nav-link", { active: activePage === 'dona' }]}>Dona</a>
@@ -193,7 +193,7 @@ const { title, activePage } = Astro.props;
         gap: 8px;
         font-family: 'Fraunces', serif;
         font-weight: 700;
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         color: var(--brown-dark);
         transition: transform 0.2s ease;
       }
@@ -377,7 +377,7 @@ const { title, activePage } = Astro.props;
         }
 
         .logo {
-          font-size: 1.05rem;
+          font-size: 0.85rem;
           min-width: 0;
         }
 
